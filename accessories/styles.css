@@ -1,10 +1,14 @@
-.body{
+/* Ensures the body grid layout covers the full height of the viewport */
+body {
     display: grid;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-
+/* Title section styling */
 .titleclass {
-    background-image: url(./bg2.jpg);
+    background-image: url(./background1.jpg);
     background-size: cover; /* Ensures the background image covers the entire element */
     background-position: center center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating of the image */
@@ -33,8 +37,7 @@
     white-space: nowrap; /* Prevents text from breaking or wrapping */
 }
 
-
-
+/* Profile section styling */
 #me {
     display: flex; /* Makes the section a flex container */
     align-items: center; /* Centers items vertically */
@@ -63,6 +66,8 @@
     max-width: 800px; /* Limits the width of the text for readability */
     margin: 0 auto; /* Centers the text container */
 }
+
+/* Skills section styling */
 #skills {
     background-color: #766E53;
     padding: 50px 0;
@@ -124,59 +129,103 @@
     letter-spacing: normal; /* Ensures normal letter spacing */
     line-height: 1.5; /* Sets line height for better readability */
     margin: 10px 0; /* Adjusts margin to remove unnecessary space */
-    padding: 0; /* Removes padding to avoid extra space */
-    color: #FFFFFF; /* Keeps paragraph text white */
+    padding: 0 20px; /* Adds padding to ensure text doesn’t touch the edges */
 }
 
-
+/* Contact section styling */
 #contact {
-    background-color: #4C473E;
-    color: white; /* This sets the default text color inside the contact section to white */
-    padding: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #30312B;
+    color: #FFFFFF;
 }
-#contact h2{
+
+.contactclasss {
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+}
+
+.jumbotron {
+    padding: 2rem;
+}
+
+.jumbotron-heading {
     font-size: 2.5rem;
+    color: #FFFFFF;
 }
 
-#contact .btn-outline-dark {
-    color: white; /* Sets the text color of the button to white */
-    border-color: black; /* Sets the border color of the button to white for consistency */
+.btn-outline-dark {
+    border-color: #FFFFFF;
+    color: #FFFFFF; /* Text color for the button */
 }
 
-#contact .btn-outline-dark:hover {
-    background-color: white; /* Changes the button background color to white on hover */
-    color: #4C473E; /* Sets the text color to match the background color on hover */
-}
-#contact h2,p{
-    letter-spacing: 5px;
-    padding: 30px;
+.btn-outline-dark:hover {
+    background-color: #FFFFFF;
+    color: #30312B; /* Text color on hover */
 }
 
-.bottom-container {
+/* Footer styling */
+footer {
     background-color: #30312B;
     color: white;
     text-align: center;
-    padding: 50px 0 20px;
-    
+    padding: 20px 0; /* Adjusted for smaller screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bottom-container a {
-    margin: 0 20px; /* Adjust this value to control horizontal spacing */
+    margin: 5px 15px; /* Adjusted for smaller screens */
 }
 
-a:visited {
+.bottom-container p {
+    margin: 25px 0 10px;
+}
+
+.footer-link {
     color: white;
-    background-color: transparent;
     text-decoration: none;
+    font-size: 16px; /* Adjust font size for better visibility */
 }
-a:hover {
+
+.footer-link:hover {
     color: #4C473E;
-    background-color: transparent;
     text-decoration: underline;
 }
-a:active {
-    color: green;
-    background-color: transparent;
-    text-decoration: underline;
+
+/* Media queries for better responsiveness */
+@media (max-width: 768px) {
+    .titleclass p {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .meclass {
+        padding: 5%;
+    }
+
+    .profile {
+        height: 180px; /* Adjust height for smaller screens */
+    }
+
+    .wizard {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .skill-card {
+        max-width: 100%; /* Ensures cards fit within the container */
+        padding: 10px;
+    }
+
+    .my-skills h2 {
+        font-size: 50px; /* Adjust font size for smaller screens */
+    }
+
+    .footer-link {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin: 5px; /* Reduce margin for better fit */
+    }
+
+    .bottom-container p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
 }
