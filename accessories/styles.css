@@ -1,0 +1,163 @@
+.body{
+    display: grid;
+}
+.titleclass{
+    background-image: url(./background1.jpg);
+    height: 100vh;
+}
+.akshayjith{
+    color: antiquewhite;
+    padding-top: 18%;
+    letter-spacing: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titleclass p{
+    padding-top: 5%;
+    font-size: xx-large;
+}
+
+#me {
+    display: flex; /* Makes the section a flex container */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    text-align: center; /* Ensures text is centered */
+    padding: 30px; /* Adds some padding around the section */
+    background-color: #433934; /* Optional: Add a background color for contrast */
+}
+
+.meclass {
+    display: flex; /* Makes this div a flex container */
+    flex-direction: column; /* Stacks child elements vertically */
+    align-items: center; /* Centers items horizontally */
+    padding: 8%;
+}
+
+.profile {
+    max-width: 100%; /* Ensures the image scales responsively */
+    height: 230px; /* Maintains the aspect ratio */
+    margin-bottom: 30px; /* Adds space between the image and the text */
+}
+
+.wizard {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; /* Makes the text color white */
+    max-width: 800px; /* Limits the width of the text for readability */
+    margin: 0 auto; /* Centers the text container */
+}
+#skills {
+    background-color: #766E53;
+    padding: 50px 0;
+}
+
+.skillclass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+.skill-card {
+    background-color: #665D4A;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.my-skills h2 {
+    font-size: 65px;
+    margin-top: 40px;
+    letter-spacing: 7px;
+    color: #FFFFFF;
+}
+
+.skill-card h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.skill-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.my-skills {
+    width: 100%;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+.skill-card p {
+    letter-spacing: normal; /* Ensures normal letter spacing */
+    line-height: 1.5; /* Sets line height for better readability */
+    margin: 10px 0; /* Adjusts margin to remove unnecessary space */
+    padding: 0; /* Removes padding to avoid extra space */
+    color: #FFFFFF; /* Keeps paragraph text white */
+}
+
+
+#contact {
+    background-color: #4C473E;
+    color: white; /* This sets the default text color inside the contact section to white */
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#contact h2{
+    font-size: 2.5rem;
+}
+
+#contact .btn-outline-dark {
+    color: white; /* Sets the text color of the button to white */
+    border-color: black; /* Sets the border color of the button to white for consistency */
+}
+
+#contact .btn-outline-dark:hover {
+    background-color: white; /* Changes the button background color to white on hover */
+    color: #4C473E; /* Sets the text color to match the background color on hover */
+}
+#contact h2,p{
+    letter-spacing: 5px;
+    padding: 30px;
+}
+
+.bottom-container {
+    background-color: #30312B;
+    color: white;
+    text-align: center;
+    padding: 50px 0 20px;
+    
+}
+
+.bottom-container a {
+    margin: 0 20px; /* Adjust this value to control horizontal spacing */
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #4C473E;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: green;
+    background-color: transparent;
+    text-decoration: underline;
+}
