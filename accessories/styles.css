@@ -1,10 +1,14 @@
 .body{
     display: grid;
 }
-.titleclass{
+.titleclass {
     background-image: url(./background1.jpg);
-    height: 100vh;
+    background-size: cover; /* Ensures the background image covers the entire element */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating of the image */
+    height: 100vh; /* Full viewport height */
 }
+
 .akshayjith{
     color: antiquewhite;
     padding-top: 18%;
@@ -15,6 +19,7 @@
     padding-top: 5%;
     font-size: xx-large;
 }
+
 
 #me {
     display: flex; /* Makes the section a flex container */
