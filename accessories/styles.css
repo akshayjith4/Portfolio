@@ -1,73 +1,72 @@
-/* Ensures the body grid layout covers the full height of the viewport */
+
 body {
     display: grid;
     min-height: 100vh;
     margin: 0;
     padding: 0;
 }
-
-/* Title section styling */
+/* Title section */
 .titleclass {
     background-image: url(./background1.jpg);
-    background-size: cover; /* Ensures the background image covers the entire element */
-    background-position: center center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating of the image */
-    height: 100vh; /* Full viewport height */
-    display: flex; /* Makes the section a flex container */
-    align-items: center; /* Centers items vertically */
-    justify-content: center; /* Centers items horizontally */
-    text-align: center; /* Ensures text is centered */
-    padding: 0 1rem; /* Adds horizontal padding to prevent text from touching edges */
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .akshayjith {
     color: antiquewhite;
     letter-spacing: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    white-space: nowrap; /* Prevents text from breaking or wrapping */
-    overflow: hidden; /* Prevents overflow */
-    text-overflow: clip; /* Ensures no ellipsis is added */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
 }
 
 .titleclass p {
-    padding-top: 1rem; /* Adjust padding for better spacing */
-    font-size: 2rem; /* Adjust font size for responsiveness */
-    margin: 0; /* Remove default margin */
-    white-space: nowrap; /* Prevents text from breaking or wrapping */
+    padding-top: 1rem;
+    font-size: 2rem;
+    margin: 0;
+    white-space: nowrap;
 }
 
-/* Profile section styling */
+/* Profile section  */
 #me {
-    display: flex; /* Makes the section a flex container */
-    align-items: center; /* Centers items vertically */
-    justify-content: center; /* Centers items horizontally */
-    text-align: center; /* Ensures text is centered */
-    padding: 30px; /* Adds some padding around the section */
-    background-color: #433934; /* Optional: Add a background color for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background-color: #433934;
 }
 
 .meclass {
-    display: flex; /* Makes this div a flex container */
-    flex-direction: column; /* Stacks child elements vertically */
-    align-items: center; /* Centers items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 8%;
 }
 
 .profile {
-    max-width: 100%; /* Ensures the image scales responsively */
-    height: 230px; /* Maintains the aspect ratio */
-    margin-bottom: 30px; /* Adds space between the image and the text */
+    max-width: 100%;
+    height: 230px;
+    margin-bottom: 30px;
 }
 
 .wizard {
     font-family: Arial, Helvetica, sans-serif;
-    color: white; /* Makes the text color white */
-    max-width: 800px; /* Limits the width of the text for readability */
-    margin: 0 auto; /* Centers the text container */
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Skills section styling */
+/* Skills section  */
 #skills {
     background-color: #766E53;
     padding: 50px 0;
@@ -126,13 +125,13 @@ body {
 }
 
 .skill-card p {
-    letter-spacing: normal; /* Ensures normal letter spacing */
-    line-height: 1.5; /* Sets line height for better readability */
-    margin: 10px 0; /* Adjusts margin to remove unnecessary space */
-    padding: 0 20px; /* Adds padding to ensure text doesn’t touch the edges */
+    letter-spacing: normal;
+    line-height: 1.5;
+    margin: 10px 0;
+    padding: 0 20px;
 }
 
-/* Contact section styling */
+/* Contact section  */
 #contact {
     background-color: #30312B;
     color: #FFFFFF;
@@ -155,27 +154,27 @@ body {
 
 .btn-outline-dark {
     border-color: #FFFFFF;
-    color: #FFFFFF; /* Text color for the button */
+    color: #FFFFFF;
 }
 
 .btn-outline-dark:hover {
     background-color: #FFFFFF;
-    color: #30312B; /* Text color on hover */
+    color: #30312B;
 }
 
-/* Footer styling */
+/* Footer  */
 footer {
     background-color: #30312B;
     color: white;
     text-align: center;
-    padding: 20px 0; /* Adjusted for smaller screens */
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .bottom-container a {
-    margin: 5px 15px; /* Adjusted for smaller screens */
+    margin: 5px 15px;
 }
 
 .bottom-container p {
@@ -185,7 +184,7 @@ footer {
 .footer-link {
     color: white;
     text-decoration: none;
-    font-size: 16px; /* Adjust font size for better visibility */
+    font-size: 16px;
 }
 
 .footer-link:hover {
@@ -193,10 +192,10 @@ footer {
     text-decoration: underline;
 }
 
-/* Media queries for better responsiveness */
+/* responsiveness */
 @media (max-width: 768px) {
     .titleclass p {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        font-size: 1.5rem;
     }
 
     .meclass {
@@ -204,28 +203,28 @@ footer {
     }
 
     .profile {
-        height: 180px; /* Adjust height for smaller screens */
+        height: 180px;
     }
 
     .wizard {
-        font-size: 1rem; /* Adjust font size for smaller screens */
+        font-size: 1rem;
     }
 
     .skill-card {
-        max-width: 100%; /* Ensures cards fit within the container */
+        max-width: 100%;
         padding: 10px;
     }
 
     .my-skills h2 {
-        font-size: 50px; /* Adjust font size for smaller screens */
+        font-size: 50px;
     }
 
     .footer-link {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        margin: 5px; /* Reduce margin for better fit */
+        font-size: 14px;
+        margin: 5px;
     }
 
     .bottom-container p {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px;
     }
 }
