@@ -1,24 +1,38 @@
 .body{
     display: grid;
 }
+
+
 .titleclass {
     background-image: url(./background1.jpg);
     background-size: cover; /* Ensures the background image covers the entire element */
     background-position: center center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating of the image */
     height: 100vh; /* Full viewport height */
+    display: flex; /* Makes the section a flex container */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    text-align: center; /* Ensures text is centered */
+    padding: 0 1rem; /* Adds horizontal padding to prevent text from touching edges */
+    box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
-.akshayjith{
+.akshayjith {
     color: antiquewhite;
-    padding-top: 18%;
     letter-spacing: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap; /* Prevents text from breaking or wrapping */
+    overflow: hidden; /* Prevents overflow */
+    text-overflow: clip; /* Ensures no ellipsis is added */
 }
-.titleclass p{
-    padding-top: 5%;
-    font-size: xx-large;
+
+.titleclass p {
+    padding-top: 1rem; /* Adjust padding for better spacing */
+    font-size: 2rem; /* Adjust font size for responsiveness */
+    margin: 0; /* Remove default margin */
+    white-space: nowrap; /* Prevents text from breaking or wrapping */
 }
+
 
 
 #me {
