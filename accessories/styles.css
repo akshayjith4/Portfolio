@@ -4,7 +4,7 @@
 
 
 .titleclass {
-    background-image: url(./background1.jpg);
+    background-image: url(./bg2.jpg);
     background-size: cover; /* Ensures the background image covers the entire element */
     background-position: center center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating of the image */
