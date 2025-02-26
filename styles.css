@@ -20,7 +20,7 @@ a:hover, button:hover {
     transform: scale(1.05);
 }
 
-/* Containers */
+/* Main Container */
 .container {
     max-width: 900px;
     margin: auto;
@@ -34,20 +34,19 @@ header {
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid white;
-    
 }
 
-/* Profile Image - Bigger & Floating Animation */
+/* Profile Image - Floating Animation */
 .profile-pic {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     border: 2px solid white;
     object-fit: cover;
-    animation: float 3s ease-in-out infinite; /* Floating effect */
+    animation: float 3s ease-in-out infinite;
 }
 
-/* Floating Effect */
+/* Floating Animation Effect */
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -98,7 +97,7 @@ section {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Project Images - Smaller */
+/* Project Images */
 .project img {
     width: 70px;
     height: auto;
@@ -126,7 +125,7 @@ section {
     background-color: black;
     color: white;
     border: 2px solid white;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8); /* Glowing effect */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
 }
 
 /* Increase Text Size */
@@ -168,27 +167,76 @@ h2:hover {
 }
 
 /* Responsive Styles */
-@media (max-width: 600px) {
-    .profile-pic {
-        width: 140px;
-        height: 140px;
+@media (max-width: 768px) {
+    /* Adjust container width for smaller screens */
+    .container {
+        max-width: 95%;
+        padding: 20px;
     }
 
+    /* Adjust hero section for better mobile fit */
+    header {
+        height: auto;
+        padding: 40px 10px;
+        text-align: center;
+    }
+
+    /* Profile image - Smaller for mobile */
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Reduce font sizes for mobile readability */
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    /* Stack projects vertically */
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Make project cards take full width */
     .project {
         width: 90%;
+        padding: 15px;
     }
 
+    /* Reduce project image size */
     .project img {
-        width: 60px;
+        width: 50px;
     }
 
+    /* Adjust button size */
+    .btn {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+
+    /* Make social icons smaller */
     .social-icons img {
         width: 25px;
         height: 25px;
     }
+
+    /* Improve footer spacing */
+    footer {
+        padding: 20px;
+    }
 }
 
-
+/* Project Image Hover Effect */
 .project img {
     transition: transform 0.3s ease-in-out;
 }
@@ -197,7 +245,7 @@ h2:hover {
     transform: scale(1.1);
 }
 
-
+/* Button Ripple Effect */
 .btn {
     position: relative;
     overflow: hidden;
@@ -220,6 +268,7 @@ h2:hover {
     opacity: 1;
     transform: scale(1);
 }
+
 /* Hacking Warning */
 .hacking-warning {
     text-align: center;
@@ -234,6 +283,8 @@ h2:hover {
     color: lime !important;
     font-family: "Courier New", monospace !important;
 }
+
+/* Hacking Alert */
 #hacking-alert {
     position: fixed;
     top: 20px;
@@ -250,7 +301,7 @@ h2:hover {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Show alert */
+/* Show alert when active */
 .show {
     opacity: 1 !important;
 }
