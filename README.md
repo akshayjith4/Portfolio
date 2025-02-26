@@ -33,10 +33,10 @@ git clone https://github.com/akshayjith4/portfolio.git
 ---
 
 ## 📢 Contact Me
-🔗 Portfolio: [www.akshayjith_ps.com](https://akshayjith.netlify.app/)
-💼 LinkedIn: Akshayjith P S
+🔗 Portfolio: [https://akshayjith.netlify.app/](https://akshayjith.netlify.app/)
+💼 LinkedIn: [Akshayjith P S](https://www.linkedin.com/in/akshayjith-p-s-591551240/)
 📧 Email: akshayjith.dev@gmail.com
-🐦 GitHub: @akshayjith4
+🐦 GitHub: [@akshayjith4](https://github.com/akshayjith4)
 
 ---
 
