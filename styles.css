@@ -1,307 +1,100 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    cursor: crosshair; /* Normal crosshair cursor */
-}
+// Wait for the DOM to be fully loaded before running scripts
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
 
-/* Custom Cursor on Hover */
-a, button {
-    cursor: pointer; /* Standard pointer for links and buttons */
-    transition: transform 0.2s ease-in-out;
-}
-
-a:hover, button:hover {
-    transform: scale(1.05);
-}
-
-/* Main Container */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 50px 30px;
-}
-
-/* Hero Section */
-header {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid white;
-}
-
-/* Profile Image - Floating Animation */
-.profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 2px solid white;
-    object-fit: cover;
-    animation: float 3s ease-in-out infinite;
-}
-
-/* Floating Animation Effect */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
+    // Function to reveal sections when scrolled into view
+    function revealSections() {
+        sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.75) {
+                section.classList.add("visible");
+            }
+        });
     }
-    50% {
-        transform: translateY(-10px);
+
+    // Make sure the first section is visible immediately
+    document.querySelector("#hero").classList.add("visible");
+
+    // Run reveal function on page load and when scrolling
+    revealSections();
+    window.addEventListener("scroll", revealSections);
+});
+
+// Typing Effect for Hero Section
+const text = "Akshayjith P S";
+let i = 0;
+
+function typeEffect() {
+    if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
     }
 }
 
-/* Sections */
-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
+// Start typing effect once the DOM is loaded
+document.addEventListener("DOMContentLoaded", typeEffect);
 
-/* Fade-in Effect */
-.visible {
-    opacity: 1 !important;
-    transform: translateY(0);
-}
+// Handle "H" Key Press - Activate Hacking Mode
+document.addEventListener("keydown", function (event) {
+    if (event.key.toLowerCase() === "h") {
+        document.body.classList.add("hacking-mode");
 
-/* Project Section */
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+        // Show hacking alert
+        let alertBox = document.getElementById("hacking-alert");
+        alertBox.innerText = "⚠️ SYSTEM BREACH DETECTED! 🔴 \nEncrypting all files… 95% complete... 💀 ERROR: Just kidding! You’re safe… for now.";
+        alertBox.classList.add("show");
 
-.project {
-    background: black;
-    border: 2px solid white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 280px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+        // Hide alert after 3 seconds
+        setTimeout(() => {
+            alertBox.classList.remove("show");
+        }, 3000);
 
-/* Hover Effects for Project Cards */
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-}
-
-/* Project Images */
-.project img {
-    width: 70px;
-    height: auto;
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto 10px;
-}
-
-/* Glowing Button Effect */
-.btn {
-    display: inline-block;
-    padding: 14px 24px;
-    margin-top: 20px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out, box-shadow 0.3s;
-}
-
-.btn:hover {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
-}
-
-/* Increase Text Size */
-h1 {
-    font-size: 38px;
-}
-
-h2 {
-    font-size: 30px;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hover Effect for Section Headings */
-h2:hover {
-    transform: scale(1.1);
-}
-
-/* Social Media Icons */
-.social-icons {
-    margin-top: 15px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-/* Hover Effect for Social Media Icons */
-.social-icons img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.5);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    /* Adjust container width for smaller screens */
-    .container {
-        max-width: 95%;
-        padding: 20px;
+        // Reset hacking mode after 3 seconds
+        setTimeout(() => {
+            document.body.classList.remove("hacking-mode");
+        }, 3000);
     }
+});
 
-    /* Adjust hero section for better mobile fit */
-    header {
-        height: auto;
-        padding: 40px 10px;
-        text-align: center;
+// Handle "SHIFT + F" - Redirect to Flappy Bird
+document.addEventListener("keydown", function (event) {
+    if (event.shiftKey && event.key.toLowerCase() === "f") {
+        event.preventDefault(); // Prevents the default action
+        window.location.href = "https://flappybird.io/"; // Redirects to Flappy Bird
     }
+});
 
-    /* Profile image - Smaller for mobile */
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-    }
-
-    /* Reduce font sizes for mobile readability */
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    /* Stack projects vertically */
-    .project-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Make project cards take full width */
-    .project {
-        width: 90%;
-        padding: 15px;
-    }
-
-    /* Reduce project image size */
-    .project img {
-        width: 50px;
-    }
-
-    /* Adjust button size */
-    .btn {
-        padding: 10px 18px;
-        font-size: 16px;
-    }
-
-    /* Make social icons smaller */
-    .social-icons img {
-        width: 25px;
-        height: 25px;
-    }
-
-    /* Improve footer spacing */
-    footer {
-        padding: 20px;
-    }
+// Function to check if the device is mobile-sized
+function isMobile() {
+    return window.innerWidth <= 768;
 }
 
-/* Project Image Hover Effect */
-.project img {
-    transition: transform 0.3s ease-in-out;
-}
+// Handle Click on "Don't Press H" (Only for Mobile Users)
+document.getElementById("hack-trigger").addEventListener("click", function () {
+    if (isMobile()) {
+        document.body.classList.add("hacking-mode");
 
-.project img:hover {
-    transform: scale(1.1);
-}
+        // Show hacking alert
+        let alertBox = document.getElementById("hacking-alert");
+        alertBox.innerText = "⚠️ SYSTEM BREACH DETECTED! 🔴 Encrypting all files… 95% complete... 💀 ERROR: Just kidding! You’re safe… for now.";
+        alertBox.classList.add("show");
 
-/* Button Ripple Effect */
-.btn {
-    position: relative;
-    overflow: hidden;
-}
+        // Hide alert after 3 seconds
+        setTimeout(() => {
+            alertBox.classList.remove("show");
+        }, 3000);
 
-.btn::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.4s, transform 0.4s;
-    transform: scale(0);
-}
+        // Reset hacking mode after 3 seconds
+        setTimeout(() => {
+            document.body.classList.remove("hacking-mode");
+        }, 3000);
+    }
+});
 
-.btn:active::after {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Hacking Warning */
-.hacking-warning {
-    text-align: center;
-    font-size: 16px;
-    color: red;
-    margin-top: 30px;
-}
-
-/* Hacking Mode */
-.hacking-mode {
-    background-color: black !important;
-    color: lime !important;
-    font-family: "Courier New", monospace !important;
-}
-
-/* Hacking Alert */
-#hacking-alert {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: lime;
-    font-family: "Courier New", monospace;
-    padding: 10px 20px;
-    border: 2px solid lime;
-    border-radius: 5px;
-    font-size: 18px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* Show alert when active */
-.show {
-    opacity: 1 !important;
-}
+// Handle Click on "Press SHIFT + F" (Only for Mobile Users)
+document.getElementById("flappy-trigger").addEventListener("click", function () {
+    if (isMobile()) {
+        window.location.href = "https://flappybird.io/";
+    }
+});
