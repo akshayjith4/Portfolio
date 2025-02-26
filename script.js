@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Make sure the first section is visible immediately
     document.querySelector("#hero").classList.add("visible");
-
-    // Run when page loads and on scroll
     revealSections();
     window.addEventListener("scroll", revealSections);
 });
@@ -40,9 +38,7 @@ document.addEventListener("keydown", function (event) {
 
         setTimeout(() => {
             alertBox.classList.remove("show");
-        }, 3000); // Hide after 2 seconds
-
-        // Reset hacking mode after 6 seconds
+        }, 3000); 
         setTimeout(() => {
             document.body.classList.remove("hacking-mode");
         }, 3000);
@@ -51,7 +47,7 @@ document.addEventListener("keydown", function (event) {
 
 document.addEventListener("keydown", function (event) {
     if (event.shiftKey && event.key.toLowerCase() === "f") {
-        event.preventDefault(); // Prevents the print dialog
+        event.preventDefault(); 
         window.location.href = "https://flappybird.io/"; // Redirects to Flappy Bird
     }
 });
