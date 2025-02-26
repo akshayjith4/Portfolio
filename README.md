@@ -27,15 +27,20 @@ Check out my portfolio live on **[Netlify](https://akshayjith.netlify.app/)**
 To run this project locally, follow these steps:
 1️⃣ **Clone the repository**  
 git clone https://github.com/akshayjith4/portfolio.git
+
 2️⃣ Navigate to the folder
+
 3️⃣ Open index.html in your browser
 
 ---
 
 ## 📢 Contact Me
 🔗 Portfolio: [https://akshayjith.netlify.app/](https://akshayjith.netlify.app/)
+
 💼 LinkedIn: [Akshayjith P S](https://www.linkedin.com/in/akshayjith-p-s-591551240/)
+
 📧 Email: akshayjith.dev@gmail.com
+
 🐦 GitHub: [@akshayjith4](https://github.com/akshayjith4)
 
 ---
