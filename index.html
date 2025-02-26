@@ -3,81 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./accessories/styles.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Akshayjith P S | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="body">
-        <section id="title">
-            <div class="titleclass">
-                <div class="text-center akshayjith">
-                    <h1 class="display-1">Hi, I'm Akshayjith.</h1>
-                    <div class="col-lg-6 mx-auto">
-                        <p class="lead mb-8">Full Stack Developer</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="me">
-            <div class="meclass">
-                <img class="profile" src="./accessories/akshayjith_resume.png" alt="Profile Image">
-                <h2 class="wizard">🚀 Full Stack Developer by day, coding wizard by night. I turn coffee into code and dreams into apps. ☕️✨ My love for debugging is only rivaled by my passion for deploying flawless code and optimizing algorithms. Cheers to making the web a better place, one line of code at a time – and avoiding infinite loops in my free time! 🍻👨‍💻</h2>
-            </div>
-        </section>
-        
-        <section id="skills">
-            <div class="skillclass">
-                <div class="my-skills"><h2>My Skills</h2></div>
-                <div class="skill-card">
-                    <img src="./accessories/web-development.png" height="350px" alt="Web Development">
-                    <div>
-                        <h3>Web Development Extraordinaire</h3>
-                        <p>Master of crafting stunning, responsive websites with HTML, CSS, and JavaScript. Skilled in turning complex requirements into elegant, user-friendly interfaces.</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <img src="./accessories/icons8-python-240.png" height="280px" alt="Python">
-                    <div>
-                        <h3>Python Prodigy</h3>
-                        <p>Adept at using Python for everything from web development to automation. Whether it’s building dynamic web apps with Flask or diving into data analysis, Python is my go-to tool.</p>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <img src="./accessories/bug bounty.png" height="200px" alt="Bug Bounty">
-                    <div>
-                        <h3>Code Whisperer and Bug Bounty Hunter</h3>
-                        <p>Known for my uncanny ability to communicate with code and debug issues with a sense of humor. My debugging skills are so sharp that even the bugs ask for a timeout!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <div class="contactclasss">
-                <section class="jumbotron text-center">
-                    <div class="container">
-                        <h2 class="jumbotron-heading">Get In Touch</h2>
-                        <h3 class="lead">Feel free to drop me a line – even my code needs a good conversation now and then!</h3>
-                        <p>
-                            <a href="mailto:akshayjithadoor@gmail.com" class="btn btn-dark my-2">CONTACT ME</a>
-                        </p>
-                    </div>
-                </section>
-            </div>
-        </section>
-    </div>
 
-    <footer>
-        <div class="bottom-container">
-            <a class="footer-link" href="https://www.linkedin.com/in/akshayjith-p-s-591551240/">LinkedIn</a>
-            <a class="footer-link" href="https://x.com/AkshayjithPs">Twitter</a>
-            <a class="footer-link" href="https://github.com/akshayjith4">GitHub</a>
-            <p class="copyright">© Akshayjith P S.</p>
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="container">
+            <img src="images/profile.jpg" alt="Akshayjith P S" class="profile-pic">
+            <h1 id="typing-text"></h1>
+            <p id="sub-text">Software Engineer | Python, Java, JavaScript</p>
+
+            <a href="assets/resume.pdf" download="Akshayjith_P_S_Resume.pdf" class="btn">Download Resume</a>
         </div>
-    </footer>
+    </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a software engineer specializing in <strong>Web & AI Development</strong>. I love building scalable solutions that make an impact.</p>
+            <p>My expertise includes <strong>Python, Java, JavaScript, Flask, and Django</strong>. I'm constantly learning and exploring new technologies.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <img src="images/opticheck.svg" alt="OptiCheck">
+                    <h3>OptiCheck - Eye Test Application</h3>
+                    <p>A vision testing app for distance, near vision, astigmatism, and color blindness.</p>
+                    <a href="https://github.com/akshayjith4/OptiCheck" target="_blank" class="btn">View on GitHub</a>
+
+                </div>
+        
+                <div class="project">
+                    <img src="images/trapulator.png" alt="Trapulator">
+                    <h3>Trapulator - Chaotic Calculator</h3>
+                    <p>A fun, interactive calculator where buttons move unpredictably.</p>
+                    <a href="https://github.com/akshayjith4/Trapulator" target="_blank" class="btn">View on GitHub</a>
+                </div>
+        
+                <div class="project">
+                    <img src="images/billmates.png" alt="BillMates">
+                    <h3>BillMates - Shared Expense Manager</h3>
+                    <p>An app to track and split shared expenses among flatmates.</p>
+                    <a href="https://github.com/akshayjith4/BillMates" target="_blank" class="btn">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+<footer>
+    <div class="container">
+        <p>Connect with me:</p>
+        <div class="social-icons">
+            <a href="https://github.com/akshayjith4" target="_blank"><img src="images/github_icon.png" alt="GitHub"></a>
+            <a href="https://linkedin.com/in/akshayjith-p-s-591551240" target="_blank"><img src="images/linkedin_icon.png" alt="LinkedIn"></a>
+            <a href="mailto:akshayjith.dev@gmail.com"><img src="images/email_icon.png" alt="Email"></a>
+            <a href="https://www.instagram.com/_akshay.jith/" target="_blank"><img src="images/instagram_icon.png" alt="Instagram"></a>
+        </div>
+        <p class="hacking-warning">⚠️ Don't press the "H" key! ⚠️<br>Press Ctrl + P instead.</p>
+
+    </div>
+</footer>
+
+<div id="hacking-alert" class="hidden">🔓 Hacking successful</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
