@@ -3,12 +3,7 @@
 🚀 Welcome to my personal portfolio! This website showcases my **projects, skills, and experience** as a **Software Engineer** specializing in Web & AI Development.
 
 ## 🔥 Live Demo
-Check out my portfolio live on **[Netlify](https://your-netlify-link.netlify.app/)**
-
----
-
-## 📸 Preview
-![Portfolio Preview](images/portfolio-preview.png) 
+Check out my portfolio live on **[Netlify](https://akshayjith.netlify.app/)**
 
 ---
 
@@ -38,7 +33,7 @@ git clone https://github.com/akshayjith4/portfolio.git
 ---
 
 ## 📢 Contact Me
-🔗 Portfolio: www.akshayjith_ps.com
+🔗 Portfolio: [www.akshayjith_ps.com](https://akshayjith.netlify.app/)
 💼 LinkedIn: Akshayjith P S
 📧 Email: akshayjith.dev@gmail.com
 🐦 GitHub: @akshayjith4
