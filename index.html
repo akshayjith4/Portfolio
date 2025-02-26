@@ -8,13 +8,19 @@
 </head>
 <body>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Profile and Introduction) -->
     <header id="hero">
         <div class="container">
-            <img src="images/profile.JPG" alt="Akshayjith P S" class="profile-pic">
+            <!-- Profile Image -->
+            <img src="images/profile.jpg" alt="Akshayjith P S" class="profile-pic">
+            
+            <!-- Typing Animation for Name -->
             <h1 id="typing-text"></h1>
+            
+            <!-- Subtitle -->
             <p id="sub-text">Software Engineer | Python, Java, JavaScript</p>
 
+            <!-- Resume Download Button -->
             <a href="assets/resume.pdf" download="Akshayjith_P_S_Resume.pdf" class="btn">Download Resume</a>
         </div>
     </header>
@@ -33,14 +39,15 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="project-list">
+                <!-- Project: OptiCheck -->
                 <div class="project">
                     <img src="images/opticheck.svg" alt="OptiCheck">
                     <h3>OptiCheck - Eye Test Application</h3>
                     <p>A vision testing app for distance, near vision, astigmatism, and color blindness.</p>
                     <a href="https://github.com/akshayjith4/OptiCheck" target="_blank" class="btn">View on GitHub</a>
-
                 </div>
         
+                <!-- Project: Trapulator -->
                 <div class="project">
                     <img src="images/trapulator.png" alt="Trapulator">
                     <h3>Trapulator - Chaotic Calculator</h3>
@@ -48,6 +55,7 @@
                     <a href="https://github.com/akshayjith4/Trapulator" target="_blank" class="btn">View on GitHub</a>
                 </div>
         
+                <!-- Project: BillMates -->
                 <div class="project">
                     <img src="images/billmates.png" alt="BillMates">
                     <h3>BillMates - Shared Expense Manager</h3>
@@ -58,24 +66,30 @@
         </div>
     </section>
 
-    
+    <!-- Footer with Social Media Links -->
+    <footer>
+        <div class="container">
+            <p>Connect with me:</p>
+            <div class="social-icons">
+                <a href="https://github.com/akshayjith4" target="_blank"><img src="images/github_icon.png" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/akshayjith-p-s-591551240" target="_blank"><img src="images/linkedin_icon.png" alt="LinkedIn"></a>
+                <a href="mailto:akshayjith.dev@gmail.com"><img src="images/email_icon.png" alt="Email"></a>
+                <a href="https://www.instagram.com/_akshay.jith/" target="_blank"><img src="images/instagram_icon.png" alt="Instagram"></a>
+            </div>
 
-<footer>
-    <div class="container">
-        <p>Connect with me:</p>
-        <div class="social-icons">
-            <a href="https://github.com/akshayjith4" target="_blank"><img src="images/github_icon.png" alt="GitHub"></a>
-            <a href="https://linkedin.com/in/akshayjith-p-s-591551240" target="_blank"><img src="images/linkedin_icon.png" alt="LinkedIn"></a>
-            <a href="mailto:akshayjith.dev@gmail.com"><img src="images/email_icon.png" alt="Email"></a>
-            <a href="https://www.instagram.com/_akshay.jith/" target="_blank"><img src="images/instagram_icon.png" alt="Instagram"></a>
+            <!-- Hidden Easter Egg Warning -->
+            <p class="hacking-warning">
+                <span id="hack-trigger">Don't press the "H" key!</span><br>
+                <span id="flappy-trigger">Press SHIFT + F instead.</span>
+            </p>
         </div>
-        <p class="hacking-warning">⚠️ Don't press the "H" key! ⚠️<br>Press SHIFT + F instead.</p>
+    </footer>
 
-    </div>
-</footer>
+    <!-- Hidden Alert for Hacking Mode -->
+    <div id="hacking-alert" class="hidden">Hacking successful</div>
 
-<div id="hacking-alert" class="hidden">🔓 Hacking successful</div>
-
+    <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>
