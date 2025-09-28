@@ -1,52 +1,192 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
-    text-align: center;
+/* ===== RESET & BASE STYLES ===== */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #d3d3d3;
+    text-align: center;
     scroll-behavior: smooth;
-    cursor: crosshair; /* Normal crosshair cursor */
+    cursor: crosshair;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Custom Cursor on Hover */
-a, button {
-    cursor: pointer; /* Standard pointer for links and buttons */
-    transition: transform 0.2s ease-in-out;
+/* ===== ACCESSIBILITY & INTERACTION ===== */
+
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid #d3d3d3;
+    outline-offset: 2px;
 }
 
-a:hover, button:hover {
-    transform: scale(1.05);
+body.light-mode a:focus-visible,
+body.light-mode button:focus-visible,
+body.light-mode .btn:focus-visible {
+    outline: 2px solid #333;
 }
 
-/* Main Container */
+/* ===== LIGHT MODE STYLES ===== */
+body.light-mode {
+    background-color: #d3d3d3;
+    color: #333;
+}
+
+body.light-mode header {
+    border-bottom: 2px solid #333;
+}
+
+body.light-mode .profile-pic {
+    border: 2px solid #333;
+}
+
+body.light-mode .project {
+    background: #d3d3d3;
+    border: 2px solid #333;
+    color: #333;
+}
+
+body.light-mode .project:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-color: #555;
+}
+
+body.light-mode .btn {
+    background-color: #333;
+    color: #d3d3d3;
+    border: 2px solid #333;
+}
+
+body.light-mode .btn:hover {
+    background-color: #d3d3d3;
+    color: #333;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .social-icons a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .hacking-warning {
+    color: #cc0000;
+}
+
+/* Light mode for modern project cards */
+body.light-mode .project-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .project-card:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-content h3 {
+    color: #333;
+}
+
+body.light-mode .project-content p {
+    color: #666;
+}
+
+/* Fix tech tag visibility in light mode */
+body.light-mode .tech-tag {
+    background: rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 0, 0.25);
+    color: #222;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .section-subtitle {
+    color: #666;
+}
+
+body.light-mode .projects-cta p {
+    color: #666;
+}
+
+body.light-mode .project-overlay {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+}
+
+/* Light mode buttons */
+body.light-mode .btn-primary {
+    background: #333;
+    color: #d3d3d3;
+}
+
+body.light-mode .btn-primary:hover {
+    background: transparent;
+    color: #333;
+    border-color: #333;
+}
+
+body.light-mode .btn-secondary {
+    background: transparent;
+    color: #333;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .btn-secondary:hover {
+    border-color: #333;
+}
+
+body.light-mode .btn-outline {
+    background: transparent;
+    color: #333;
+    border: 2px solid #333;
+}
+
+body.light-mode .btn-outline:hover {
+    background: #333;
+    color: #d3d3d3;
+}
+
+body.light-mode .btn-secondary.disabled {
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #999;
+}
+
+/* ===== LAYOUT & CONTAINERS ===== */
 .container {
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
     padding: 50px 30px;
 }
 
-/* Hero Section */
+/* ===== HERO SECTION ===== */
 header {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #d3d3d3;
+    position: relative;
+    transition: border-color 0.3s ease;
 }
 
-/* Profile Image - Floating Animation */
+/* Profile Image with optimized animation */
 .profile-pic {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid #d3d3d3;
     object-fit: cover;
     animation: float 3s ease-in-out infinite;
+    will-change: transform;
+    transition: border-color 0.3s ease;
 }
 
-/* Floating Animation Effect */
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -56,252 +196,768 @@ header {
     }
 }
 
-/* Sections */
+/* ===== TYPOGRAPHY ===== */
+h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+h2:hover {
+    transform: scale(1.05);
+}
+
+/* ===== SECTIONS & ANIMATIONS ===== */
 section {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Fade-in Effect */
 .visible {
-    opacity: 1 !important;
+    opacity: 1;
     transform: translateY(0);
 }
 
-/* Project Section */
+/* ===== PROJECTS SECTION ===== */
 .project-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .project {
-    background: black;
-    border: 2px solid white;
-    padding: 20px;
+    background: #000;
+    border: 2px solid #d3d3d3;
+    padding: 1.5rem;
     border-radius: 10px;
-    width: 280px;
+    width: min(280px, 90%);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Hover Effects for Project Cards */
 .project:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(211, 211, 211, 0.15);
+    border-color: #e0e0e0;
 }
 
-/* Project Images */
 .project img {
     width: 70px;
-    height: auto;
+    height: 70px;
     border-radius: 5px;
-    display: block;
-    margin: 0 auto 10px;
-}
-
-/* Glowing Button Effect */
-.btn {
-    display: inline-block;
-    padding: 14px 24px;
-    margin-top: 20px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out, box-shadow 0.3s;
-}
-
-.btn:hover {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
-}
-
-/* Increase Text Size */
-h1 {
-    font-size: 38px;
-}
-
-h2 {
-    font-size: 30px;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hover Effect for Section Headings */
-h2:hover {
-    transform: scale(1.1);
-}
-
-/* Social Media Icons */
-.social-icons {
-    margin-top: 15px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-/* Hover Effect for Social Media Icons */
-.social-icons img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.5);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    /* Adjust container width for smaller screens */
-    .container {
-        max-width: 95%;
-        padding: 20px;
-    }
-
-    /* Adjust hero section for better mobile fit */
-    header {
-        height: auto;
-        padding: 40px 10px;
-        text-align: center;
-    }
-
-    /* Profile image - Smaller for mobile */
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-    }
-
-    /* Reduce font sizes for mobile readability */
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    /* Stack projects vertically */
-    .project-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Make project cards take full width */
-    .project {
-        width: 90%;
-        padding: 15px;
-    }
-
-    /* Reduce project image size */
-    .project img {
-        width: 50px;
-    }
-
-    /* Adjust button size */
-    .btn {
-        padding: 10px 18px;
-        font-size: 16px;
-    }
-
-    /* Make social icons smaller */
-    .social-icons img {
-        width: 25px;
-        height: 25px;
-    }
-
-    /* Improve footer spacing */
-    footer {
-        padding: 20px;
-    }
-}
-
-/* Project Image Hover Effect */
-.project img {
-    transition: transform 0.3s ease-in-out;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    object-fit: contain;
 }
 
 .project img:hover {
     transform: scale(1.1);
 }
 
-/* Button Ripple Effect */
+/* ===== BUTTON STYLES ===== */
 .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    margin-top: 1rem;
+    background-color: #d3d3d3;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #d3d3d3;
+    border-radius: 5px;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    min-height: 48px;
 }
 
+.btn:hover {
+    background-color: transparent;
+    color: #d3d3d3;
+    box-shadow: 0 0 20px rgba(211, 211, 211, 0.6);
+}
+
+/* Ripple effect */
 .btn::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(211, 211, 211, 0.2);
     top: 0;
     left: 0;
     opacity: 0;
     transition: opacity 0.4s, transform 0.4s;
     transform: scale(0);
+    border-radius: 50%;
 }
 
 .btn:active::after {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(2);
 }
 
-/* Hacking Warning */
+/* ===== SOCIAL MEDIA ===== */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: inline-flex;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: rgba(211, 211, 211, 0.1);
+    transform: translateY(-2px);
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* ===== HACKING MODE ELEMENTS ===== */
 .hacking-warning {
     text-align: center;
-    font-size: 16px;
-    color: red;
-    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #ff4444;
+    margin-top: 2rem;
+    line-height: 1.4;
 }
 
-/* Hacking Mode */
+/* Hacking mode styles */
 .hacking-mode {
-    background-color: black !important;
-    color: lime !important;
+    background-color: #000 !important;
+    color: #00ff00 !important;
     font-family: "Courier New", monospace !important;
 }
 
-/* Hacking Alert */
+/* Ensure hacking mode works in both themes */
+body.light-mode.hacking-mode {
+    background-color: #000 !important;
+    color: #00ff00 !important;
+}
+
+body.light-mode.hacking-mode header {
+    border-bottom: 2px solid #00ff00 !important;
+}
+
+body.light-mode.hacking-mode .profile-pic {
+    border: 2px solid #00ff00 !important;
+}
+
+body.light-mode.hacking-mode .project {
+    background: #000 !important;
+    border: 2px solid #00ff00 !important;
+    color: #00ff00 !important;
+}
+
+body.light-mode.hacking-mode .btn {
+    background-color: #000 !important;
+    color: #00ff00 !important;
+    border: 2px solid #00ff00 !important;
+}
+
+body.light-mode.hacking-mode .btn:hover {
+    background-color: #00ff00 !important;
+    color: #000 !important;
+}
+
+body.light-mode.hacking-mode .social-icons a:hover {
+    background: rgba(0, 255, 0, 0.1) !important;
+}
+
 #hacking-alert {
     position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: lime;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #00ff00;
     font-family: "Courier New", monospace;
-    padding: 10px 20px;
-    border: 2px solid lime;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #00ff00;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1rem;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
 }
 
-/* Show alert when active */
 .show {
     opacity: 1 !important;
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(211, 211, 211, 0.1);
+    border: 1px solid rgba(211, 211, 211, 0.3);
+    color: #d3d3d3;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.light-mode .theme-toggle {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(211, 211, 211, 0.2);
+}
+
+body.light-mode .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Hacking mode theme toggle */
+body.hacking-mode .theme-toggle,
+body.light-mode.hacking-mode .theme-toggle {
+    background: rgba(0, 255, 0, 0.1) !important;
+    border: 1px solid #00ff00 !important;
+    color: #00ff00 !important;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+        padding: 2rem 1rem;
+    }
+
+    header {
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+    }
+
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 400px;
+        padding: 1.25rem;
+    }
+
+    .project img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .social-icons {
+        gap: 0.75rem;
+    }
+
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+        font-size: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .project {
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 0.625rem 1rem;
+    }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .profile-pic {
+        animation: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .btn,
+    .social-icons,
+    .hacking-warning,
+    .theme-toggle {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .project {
+        border-color: black;
+        break-inside: avoid;
+    }
+}
+
+/* ===== MODERN PROJECTS SECTION ===== */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.project-card {
+    background: rgba(211, 211, 211, 0.02);
+    border: 1px solid rgba(211, 211, 211, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(211, 211, 211, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+body.light-mode .project-image {
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.project-image img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background: rgba(211, 211, 211, 0.15);
+    border: 1px solid rgba(211, 211, 211, 0.3);
+    color: #d3d3d3;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .tech-tag:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: #d3d3d3;
+}
+
+.project-content p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-primary, .btn-secondary, .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: #d3d3d3;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: #d3d3d3;
+    border-color: #d3d3d3;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #d3d3d3;
+    border: 2px solid rgba(211, 211, 211, 0.3);
+}
+
+.btn-secondary:hover {
+    border-color: #d3d3d3;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #d3d3d3;
+    border: 2px solid #d3d3d3;
+}
+
+.btn-outline:hover {
+    background: #d3d3d3;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.projects-cta {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(211, 211, 211, 0.1);
+}
+
+.projects-cta p {
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+/* Disabled button style */
+.btn-secondary.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: rgba(211, 211, 211, 0.2);
+}
+
+body.light-mode .btn-secondary.disabled {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust grid for 4 items */
+@media (min-width: 1200px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .project-card {
+        margin: 0 1rem;
+    }
+}
+/* ===== FOOTER STYLES ===== */
+footer {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 3rem 0 2rem;
+    border-top: 1px solid rgba(211, 211, 211, 0.1);
+    margin-top: 4rem;
+}
+
+body.light-mode footer {
+    background: rgba(0, 0, 0, 0.02);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer p:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #d3d3d3;
+}
+
+body.light-mode footer p:first-child {
+    color: #333;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-flex;
+    padding: 0.75rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background: rgba(211, 211, 211, 0.1);
+    border: 1px solid rgba(211, 211, 211, 0.2);
+}
+
+body.light-mode .social-links a {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    background: rgba(211, 211, 211, 0.2);
+    box-shadow: 0 5px 15px rgba(211, 211, 211, 0.2);
+}
+
+body.light-mode .social-links a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+.easter-egg {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 1.5rem;
+    line-height: 1.4;
+}
+
+body.light-mode .easter-egg {
+    color: #666;
+}
+
+#hack-trigger,
+#flappy-trigger {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#hack-trigger:hover {
+    color: #ff4444;
+}
+
+#flappy-trigger:hover {
+    color: #4CAF50;
+}
+
+body.light-mode #hack-trigger:hover {
+    color: #cc0000;
+}
+
+body.light-mode #flappy-trigger:hover {
+    color: #2E7D32;
+}
+
+/* Hacking mode footer styles */
+body.hacking-mode footer,
+body.light-mode.hacking-mode footer {
+    background: rgba(0, 0, 0, 0.9) !important;
+    border-top: 1px solid #00ff00 !important;
+}
+
+body.hacking-mode footer p:first-child,
+body.light-mode.hacking-mode footer p:first-child {
+    color: #00ff00 !important;
+}
+
+body.hacking-mode .social-links a,
+body.light-mode.hacking-mode .social-links a {
+    background: rgba(0, 255, 0, 0.1) !important;
+    border: 1px solid #00ff00 !important;
+}
+
+body.hacking-mode .social-links a:hover,
+body.light-mode.hacking-mode .social-links a:hover {
+    background: rgba(0, 255, 0, 0.2) !important;
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3) !important;
+}
+
+body.hacking-mode .easter-egg,
+body.light-mode.hacking-mode .easter-egg {
+    color: #00ff00 !important;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 0 1.5rem;
+    }
+    
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-links a {
+        padding: 0.6rem;
+    }
+    
+    .social-links img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .easter-egg {
+        font-size: 0.8rem;
+    }
 }
