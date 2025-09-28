@@ -3,93 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshayjith P S | Portfolio</title>
+    <title>Akshayjith P S | CS Portfolio</title>
+    <meta name="description" content="Computer Science Undergraduate specializing in Java, JavaScript, Python, and web development">
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
-    <!-- Hero Section (Profile and Introduction) -->
     <header id="hero">
         <div class="container">
-            <!-- Profile Image -->
             <img src="images/profile.JPG" alt="Akshayjith P S" class="profile-pic">
-            
-            <!-- Typing Animation for Name -->
             <h1 id="typing-text"></h1>
-            
-            <!-- Subtitle -->
-            <p id="sub-text">Software Engineer | Python, Java, JavaScript</p>
-
-            <!-- Resume Download Button -->
-            <a href="assets/Akshayjith_PS_Resume.pdf" download="Akshayjith_PS_Resume.pdf" class="btn">Download Resume</a>
+            <p>Computer Science Undergraduate</p>
+            <a href="assets/Akshayjith_PS_Resume.pdf" download class="btn">Download Resume</a>
         </div>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm a software engineer specializing in <strong>Web & AI Development</strong>. I love building scalable solutions that make an impact.</p>
-            <p>My expertise includes <strong>Python, Java, JavaScript, Flask, and Django</strong>. I'm constantly learning and exploring new technologies.</p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <!-- Project: OptiCheck -->
-                <div class="project">
-                    <img src="images/opticheck.svg" alt="OptiCheck">
-                    <h3>OptiCheck - Eye Test Application</h3>
-                    <p>A vision testing app for distance, near vision, astigmatism, and color blindness.</p>
-                    <a href="https://github.com/akshayjith4/OptiCheck" target="_blank" class="btn">View on GitHub</a>
-                </div>
+    <main id="main-content">
+        <section id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <h2 id="about-heading">About Me</h2>
+                <p>Computer Science undergraduate passionate about software development, web technologies, and enterprise solutions. Proficient in <strong>Java, JavaScript, Python, C, PHP, SAP ABAP</strong> with experience building practical applications and solving complex problems.</p>
+            </div>
+        </section>
         
-                <!-- Project: Trapulator -->
-                <div class="project">
-                    <img src="images/trapulator.png" alt="Trapulator">
-                    <h3>Trapulator - Chaotic Calculator</h3>
-                    <p>A fun, interactive calculator where buttons move unpredictably.</p>
-                    <a href="https://github.com/akshayjith4/Trapulator" target="_blank" class="btn">View on GitHub</a>
+        <section id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="projects-heading">Featured Projects</h2>
+                    <p class="section-subtitle">Building innovative solutions with cutting-edge technology</p>
                 </div>
-        
-                <!-- Project: BillMates -->
-                <div class="project">
-                    <img src="images/billmates.png" alt="BillMates">
-                    <h3>BillMates - Shared Expense Manager</h3>
-                    <p>An app to track and split shared expenses among flatmates.</p>
-                    <a href="https://github.com/akshayjith4/BillMates" target="_blank" class="btn">View on GitHub</a>
+                
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/revealio_logo.png" alt="Revealio - Food Safety Platform" class="revealio-logo">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Web App</span>
+                                    <span class="tech-tag">Health Tech</span>
+                                    <span class="tech-tag">AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Revealio</h3>
+                            <p>Intelligent food safety platform that analyzes ingredients and provides personalized dietary recommendations using AI-powered scanning technology.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/akshayjith4/Revealio" target="_blank" rel="noopener" class="btn-primary">
+                                    <span>View Code</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </a>
+                                <span class="btn-secondary disabled">Demo Coming Soon</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/trapulator_logo.png" alt="Trapulator - Chaotic Calculator" class="trapulator-logo">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Game</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Interactive</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Trapulator</h3>
+                            <p>A chaotic calculator game where buttons move unpredictably and defy clicks. Test your skills against this mischievous math challenge with dynamic animations and retro aesthetics.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/akshayjith4/Trapulator" target="_blank" rel="noopener" class="btn-primary">
+                                    <span>View Code</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </a>
+                                <a href="https://akshayjith4.github.io/Trapulator/" target="_blank" rel="noopener" class="btn-secondary">
+                                    Play Demo
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/opticheck_logo.png" alt="OptiCheck Eye Health App" class="opticheck-logo">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Mobile</span>
+                                    <span class="tech-tag">Health Tech</span>
+                                    <span class="tech-tag">Accessibility</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>OptiCheck</h3>
+                            <p>Comprehensive eye health application offering professional-grade vision tests and personalized insights for accessible at-home visual assessment.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/akshayjith4/OptiCheck" target="_blank" rel="noopener" class="btn-primary">
+                                    <span>View Code</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </a>
+                                <a href="https://akshayjith4.github.io/OptiCheck" target="_blank" rel="noopener" class="btn-secondary">
+                                    Live Demo
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/memecrafter_logo.png" alt="MemeCrafter AI Generator" class="memecrafter-logo">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span class="tech-tag">AI/ML</span>
+                                    <span class="tech-tag">API Integration</span>
+                                    <span class="tech-tag">Web App</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>MemeCrafter</h3>
+                            <p>Next-generation meme creation platform leveraging Gemini AI for intelligent caption generation and seamless social media integration.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/akshayjith4/MemeCrafter" target="_blank" rel="noopener" class="btn-primary">
+                                    <span>View Code</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </a>
+                                <span class="btn-secondary disabled">Demo Coming Soon</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="projects-cta">
+                    <p>Interested in seeing more? Explore my complete development portfolio</p>
+                    <a href="https://github.com/akshayjith4" target="_blank" rel="noopener" class="btn-outline">
+                        View All Projects
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer with Social Media Links -->
     <footer>
         <div class="container">
-            <p>Connect with me:</p>
-            <div class="social-icons">
-                <a href="https://github.com/akshayjith4" target="_blank"><img src="images/github_icon.png" alt="GitHub"></a>
-                <a href="https://linkedin.com/in/akshayjith-p-s-591551240" target="_blank"><img src="images/linkedin_icon.png" alt="LinkedIn"></a>
-                <a href="mailto:akshayjith.dev@gmail.com"><img src="images/email_icon.png" alt="Email"></a>
-                <a href="https://www.instagram.com/_akshay.jith/" target="_blank"><img src="images/instagram_icon.png" alt="Instagram"></a>
+            <p>Let's connect</p>
+            <div class="social-links">
+                <a href="https://github.com/akshayjith4" target="_blank" rel="noopener" aria-label="GitHub">
+                    <img src="images/github_icon.png" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com/in/akshayjith-p-s-591551240" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <img src="images/linkedin_icon.png" alt="LinkedIn">
+                </a>
+                <a href="mailto:akshayjith.dev@gmail.com" aria-label="Email">
+                    <img src="images/email_icon.png" alt="Email">
+                </a>
+                <a href="https://www.instagram.com/_akshay.jith/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <img src="images/instagram_icon.png" alt="Instagram">
+                </a>
             </div>
-
-            <!-- Hidden Easter Egg Warning -->
-            <p class="hacking-warning">
-                <span id="hack-trigger">Don't press the "H" key!</span><br>
-                <span id="flappy-trigger">Press SHIFT + F instead.</span>
+            <p class="easter-egg">
+                <span id="hack-trigger">Try pressing "H"</span> • 
+                <span id="flappy-trigger">Shift + F for fun</span>
             </p>
         </div>
     </footer>
 
-    <!-- Hidden Alert for Hacking Mode -->
-    <div id="hacking-alert" class="hidden">Hacking successful</div>
+    <div id="hacking-alert"></div>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>
